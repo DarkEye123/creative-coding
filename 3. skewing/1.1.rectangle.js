@@ -16,10 +16,14 @@ const sketch = () => {
     w = width * 0.6;
     h = width * 0.1;
     context.save();
+
+    // moves to the center
     context.translate(x, y);
 
     context.strokeStyle = "blue";
     context.strokeRect(w * -0.5, h * -0.5, w, h);
+
+    //not necessary, but clean approach to do it every time
     context.restore();
   };
 };
