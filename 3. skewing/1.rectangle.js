@@ -1,6 +1,8 @@
 const canvasSketch = require("canvas-sketch");
 
-const settings = [1080, 1080];
+const settings = {
+  dimensions: [1080, 1080],
+};
 
 const sketch = () => {
   return ({ context, width, height }) => {
