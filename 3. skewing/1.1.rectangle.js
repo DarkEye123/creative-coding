@@ -20,6 +20,7 @@ const sketch = () => {
 
     context.strokeStyle = "blue";
     context.strokeRect(w * -0.5, h * -0.5, w, h);
+    context.restore();
   };
 };
 canvasSketch(sketch, settings);
