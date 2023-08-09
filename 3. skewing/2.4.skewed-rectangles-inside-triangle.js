@@ -7,7 +7,7 @@ const risoColors = require("riso-colors");
 const settings = {
   //good for instagram
   dimensions: [1080, 1080],
-  // animate: true,
+  animate: true,
   maxRectangles: 40,
   defaultAngleInDegrees: -30,
 };
@@ -93,7 +93,9 @@ const sketch = ({ context, width, height }) => {
       // shadowColor is applied for `fill` and `stroke`, I want shadow just for the fill
       context.shadowColor = null;
       //draw borders
-      context.stroke();
+      // context.stroke();
+
+      context.globalCompositeOperation = "source-over";
 
       // this will make that slim black line
       context.lineWidth = 2;
@@ -114,7 +116,7 @@ const sketch = ({ context, width, height }) => {
     drawPolygon({ context, radius: mask.radius - 10, sides: mask.sides });
 
     context.lineWidth = 20;
-    context.strokeStyle = "black";
+    context.strokeStyle = risoColorList[0];
     context.stroke();
     context.restore();
   };
